@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Message</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* stack content + button */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff; /* soft background */
+        }
+
+        .message-container {
+            text-align: center;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px; /* spacing between hearts and text */
+        }
+
+        .message {
+            font-size: 2em;
+            font-weight: 700;
+            color: #000080; /* dark blue */
+            line-height: 1.2em;
+        }
+
+        .top-flowers, .bottom-flowers {
+            font-size: 2em;
+            line-height: 1.2em;
+        }
+
+        .side-heart {
+            font-size: 2em;
+            line-height: 1.2em;
+        }
+
+        /* Style for the Previous button */
+        .prev-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            font-weight: bold;
+            background-color: #000080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .prev-btn:hover {
+            background-color: #1e90ff;
+        }
+    </style>
+</head>
+<script>
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw"; // random horizontal position
+    heart.style.animationDuration = (3 + Math.random() * 2) + "s"; // random speed
+    document.getElementById("hearts").appendChild(heart);
+
+    // remove heart after animation ends
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
+  // generate hearts continuously
+  setInterval(createHeart, 300);
+</script>
+
+<body>
+
+<div class="message-container">
+    <!-- Top flowers -->
+    <div class="top-flowers">🌸 🌼 🌹 🌷 🌺</div>
+    <div class="top-flowers">🌸 🌼 🌹 🌷 🌺</div>
+
+    <!-- Row with hearts + message -->
+    <div class="row">
+        <div class="side-heart">💙 💙 💙<br>💙 💙 💙</div>
+        <div class="message">
+            TO THE <br>
+            MOST AMAZING <br>
+            GIRL I KNOW, <br>
+            THANK YOU !!!!<br>
+            YOUR STARRRR!
+        </div>
+        <div class="side-heart">💙 💙 💙<br>💙 💙 💙</div>
+    </div>
+
+    <!-- Bottom flowers -->
+    <div class="bottom-flowers">🌸 🌼 🌹 🌷 🌺</div>
+    <div class="bottom-flowers">🌸 🌼 🌹 🌷 🌺</div>
+</div>
+
+<!-- Previous button -->
+<button class="prev-btn" onclick="window.location.href='yes.html'">⬅ Previous</button>
+<div class="hearts-container" id="hearts"></div>
+
+</body>
+</html>

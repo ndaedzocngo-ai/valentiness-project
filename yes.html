@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thank You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="hearts-container"></div>
+
+<script>
+  const heartsContainer = document.querySelector('.hearts-container');
+
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+    heartsContainer.appendChild(heart);
+
+    setTimeout(() => {
+      heart.remove();
+    }, 6000);
+  }
+
+  setInterval(createHeart, 400);
+</script>
+
+<body>
+
+<div class="container">
+    <h1>YESSS!!!! I knew you wouldn't dissapoint!! 💖</h1>
+    <p>Your the best thing that has ever happened to me past years  🌹</p>
+
+    <div class="gallery">
+        <img src="images/pic1.jpeg">
+        <img src="images/pic2.jpeg">
+        <img src="images/pic3.jpeg">
+        <img src="images/pic4.jpeg">
+        
+
+    <!-- New message with glowy eyes emoji -->
+    <h2 class="glowy-message">I'll forever cherish our perfect little memories ✨</h2>
+
+    <!-- Line of red heart emojis -->
+    <p class="heart-line">❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️</p>
+
+    <button class="btn bounce next-btn" onclick="location.href='amazing.html'">NEXT 💙</button>
+
+    </div>
+    <a href="index.html" class="back-btn">⬅ Previous</a>
+
+</div>
+
+</body>
+</html>
